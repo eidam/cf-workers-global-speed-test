@@ -62,7 +62,8 @@ export class GlobalSpeedTestDurableObject {
     this.memoryState[body.region] = { ...body }
     this.broadcast(this.memoryState[body.region])
 
-    // TODO persist state (save to storage)
+    // persist the result
+    this.state.waitUntil(this.storage.put(body.region, this.memoryState[body.region]))
 
     return new Response(JSON.stringify(this.memoryState[body.region]), {
       status: 200,
