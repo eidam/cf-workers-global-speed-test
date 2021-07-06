@@ -1,0 +1,1 @@
+`docker buildx build --platform linux/amd64 -t gcr.io/statusflare-app/global-speed-test:latest --push .`

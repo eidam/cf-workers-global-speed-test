@@ -1,0 +1,17 @@
+name = "global-speed-test"
+type = "javascript"
+workers_dev = true
+
+[durable_objects]
+classes = [
+  { binding = "DO_GLOBAL_SPEED_TEST", class_name = "GlobalSpeedTestDurableObject" },
+  { binding = "DO_GLOBAL_SPEED_TEST_REGISTRY", class_name = "GlobalSpeedTestDurableObjectRegistry" },
+]
+
+[build]
+command = "yarn install && yarn build"
+upload_format = "modules"
+cwd = "."
+watch_dir = "src"
+upload_dir = "dist"
+upload_exclude = ["*.map"]

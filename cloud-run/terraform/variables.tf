@@ -1,0 +1,1 @@
+variable "GCP_PROJECT" {}

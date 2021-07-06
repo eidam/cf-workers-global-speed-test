@@ -1,0 +1,15 @@
+{
+  "name": "speedy",
+  "version": "0.0.1",
+  "author": "Adam Janiš <adam.janis@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}
