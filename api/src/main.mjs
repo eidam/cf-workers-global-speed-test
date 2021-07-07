@@ -1,7 +1,7 @@
 import { Router } from 'itty-router'
 
 // export of the Durable Object class
-export { GlobalSpeedTestDurableObject } from './do.mjs'
+export { GlobalSpeedTestDurableObject } from './tests.mjs'
 export { GlobalSpeedTestDurableObjectRegistry } from './registry.mjs'
 
 // API Worker

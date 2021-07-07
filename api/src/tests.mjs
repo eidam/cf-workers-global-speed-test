@@ -1,5 +1,5 @@
 import { Router } from 'itty-router'
-import regions from './../data/regions.json'
+import regions from '../data/regions.json'
 
 export class GlobalSpeedTestDurableObject {
   constructor(state, env) {
@@ -98,14 +98,6 @@ export class GlobalSpeedTestDurableObject {
     // Now we return the other end of the pair to the client.
     // @ts-ignore
     return new Response(null, { status: 101, webSocket: pair[0] })
-  }
-
-  async writeKeyToStorage(id) {
-    let data = JSON.parse(JSON.stringify(this.memoryState[id]))
-    if (data && data.metadata && data.metadata.last_check) {
-      delete data.metadata.last_check.time
-    }
-    await this.storage.put(id, data)
   }
 
   async handleWebsocket(webSocket) {
